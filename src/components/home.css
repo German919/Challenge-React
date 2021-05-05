@@ -1,0 +1,279 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+/***************  CARTEL *************/
+.show-cartel{
+    position: absolute;
+    left: 26%;
+    top:20%;
+    inline-size: 40rem;
+    block-size: 11rem;
+    border: 5px solid #222;
+    z-index: 50;
+    background: rgb(250, 250, 250);
+    font-size: 1.5rem;
+    border-radius: .5rem;
+    position: fixed;
+}
+.show-cartel h3{
+    text-align: center;
+}
+.show-cartel button{
+    inline-size: 5.7rem;
+    padding: 1rem;
+    background: rgb(105, 163, 230);
+    border-radius: .5rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-left: 43%;
+}
+.show-cartel button:hover{
+    background: rgb(24, 122, 233);
+    color: #FFF;
+}
+
+/***************FIN****************/
+
+.title-info-equipo{
+    font-family: 'Krona One', sans-serif;
+    font-size: 2.2rem;
+    text-align: center;
+    font-weight: 900;
+}
+.container-info-group{
+    display: flex;
+    margin-bottom: 1rem;
+    box-shadow: inset 0 0 50px 0 #111;
+    background: rgb(239, 242, 243);
+}
+.powerstats{
+    inline-size: 70%;
+}
+.powerstats-acumu{
+    display: flex;
+    justify-content:space-around;
+}
+.powerstats-acumu h5 span{
+    font-size: 1.5rem;
+}
+.container-promedios{
+  display: flex;
+  flex-direction: column;
+}
+.apariencia-promedio{
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+.apariencia-promedio h5 span{
+    font-size: 1.5rem;
+}
+
+.container-info-group h3{
+    font-family: 'Krona One', sans-serif;
+    font-size: 1.7rem;
+    text-align: center;
+    font-weight: 800;
+}
+
+.container-info-group h5{
+    font-size: 1.5rem;
+}
+
+.container-card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-rows: auto;
+    grid-gap: .5rem;
+    margin-bottom: 5rem;
+    place-content: center;
+    place-items: center;
+}
+.form-search-input{
+    display: flex;   
+}
+
+.form-search-input button{
+    inline-size: 9rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    padding: .5rem;
+    background: rgb(105, 163, 230);
+    border-radius: .5rem;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    letter-spacing: .5px;
+}
+.form-search-input button:hover{
+    background: rgb(24, 122, 233);
+    font-weight: 700;
+    color: #ffd;
+}
+
+h1{
+    font-family: 'Krona One', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+}
+.button-logout{
+    position: relative;
+    bottom: 5.5rem;
+    inline-size: 5rem;
+    padding: 1rem;
+    background: rgb(105, 163, 230);
+    border-radius: .5rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-left: 92%;
+    cursor: pointer;
+}
+.button-logout:hover{
+    background: rgb(24, 122, 233);
+    color: #FFF;
+}
+
+.form-search{
+    position: relative;
+    bottom: 2rem;
+    inline-size: 45rem;
+    margin: auto;
+    padding: .5rem;
+    margin-bottom: 3rem;
+}
+.form-input{
+    inline-size: 80%;
+    margin-left: 3%;
+    padding: 1.2rem;
+    border-radius: .5rem;
+    border: 1px solid #555;
+    font-size: 1.2rem;
+    box-shadow: inset 0 0 8px 0 #000;
+}
+
+::placeholder{
+    color: #000;
+    font-size: 1.2rem;
+}
+
+.card{
+    border-radius: .3rem;
+    box-shadow: inset 5px 5px 50px 0px #000;
+    padding-bottom: 2.5rem;
+}
+
+.card-name{
+    font-family: 'New Tegomin', serif;
+    font-size: 2rem;
+    text-align: center;
+}
+.card img{
+    margin-left: 10%;
+    inline-size: 80%;
+    block-size: 18.75rem;
+}
+
+.card div{
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-button{
+    inline-size: 10rem;
+    margin: auto;
+}
+
+.card-button button{
+    background: rgb(105, 163, 230);
+    color: #000;
+    padding: .7rem;
+    border-radius: .5rem;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.card-button button:hover{
+    background: rgb(24, 122, 233);
+    color: #FFF;
+    border: inset 1px solid #000;
+}
+
+@media screen and (max-width:1024px){
+    .show-cartel{
+        position: absolute;
+        left: 20%;
+        top:20%;
+    }
+
+}
+@media screen and (max-width: 830px){
+    .container-card{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    }
+    .button-logout{
+        margin-left: 87%;
+    }
+    h1{
+        font-size: 2.7rem;
+    }
+    .title-info-equipo{
+        font-size: 2rem;
+    }
+    .container-info-group h3{
+        font-size: 1.5rem;
+    }
+    .apariencia-promedio{
+        display: flex;
+        flex-direction: column;
+    }
+    .show-cartel{
+        position: absolute;
+        left: 11%;
+        top:20%;
+    }
+}
+
+@media screen and (max-width:769px){
+    .show-cartel{
+        position: absolute;
+        left: 8%;
+        top:20%;
+    }
+
+  }
+
+@media screen and (max-width:740px){
+    .button-logout{
+        position: relative;
+        bottom: 5.5rem;
+        margin-left: 90%;
+    }
+    .container-info-group{
+        inline-size: 100%;
+    }
+    body{
+        inline-size: 750px;
+    } 
+}
+
+@media screen and (max-width:761px){
+    .show-cartel{
+        position: absolute;
+        left: 13%;
+        top:20%;
+    }   
+}
+
+@media screen and (max-width:361px){
+    .show-cartel{
+        position: absolute;
+        left: 13.6%;
+        top:20%;
+    }   
+}

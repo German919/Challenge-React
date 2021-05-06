@@ -77,7 +77,7 @@ const Home = () => {
                 : ""
             }
 
-            <h1>Equipo de Spider</h1>
+            <h1>Equipo de Doctor</h1>
             <button onClick={logout} className="button-logout">Salir</button>
             <form className="form-search" onSubmit={handleSubmit} >
                 <div className="form-search-input">

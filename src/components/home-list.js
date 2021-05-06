@@ -3,7 +3,8 @@ import {useLocation} from "wouter";
 
 const HomeList = ({listSuperHeroes, setListSuperHeroes}) => {
 
-    const[location, setLocation] = useLocation()
+    const[location, setLocation] = useLocation();
+    const[cartelEliminar, setCartelEliminar] = useState(false)
 
     const powerstats =[
         {name : "combat",  cantidad: 0}, 
@@ -29,7 +30,11 @@ const HomeList = ({listSuperHeroes, setListSuperHeroes}) => {
 
     const handleEliminar = (object) => {
         setListSuperHeroes(listSuperHeroes.filter(heroe =>heroe.id !== object.id)) 
-        alert(`${object.name} con id ${object.id} eliminado` )
+        setCartelEliminar(true)
+    //    alert(`${object.name} con id ${object.id} eliminado` )
+    }
+    const handleHide = () =>{
+        setCartelEliminar(false)
     }
 
     // ACUMULA EL POWERSTATS DE LOS SUPERHEROES DEL EQUIPO
@@ -93,6 +98,14 @@ const HomeList = ({listSuperHeroes, setListSuperHeroes}) => {
                 </div>
             </div>    
         <div className="container-card">
+        {
+            cartelEliminar ?   
+                    <div className="show-cartel">
+                        <h3>SuperHeroe Eliminado</h3>
+                        <button onClick={handleHide}>Aceptar</button>
+                    </div> : ""
+        }
+      
         {  
             listSuperHeroes.map( (superheroe, i)  =>(
                 <div key={i} className="card">
@@ -115,6 +128,7 @@ const HomeList = ({listSuperHeroes, setListSuperHeroes}) => {
                         <button onClick={()=>handleEliminar(superheroe)} >Eliminar</button>       
                     </div>
                 </div>
+                
                  )
             )
         }
